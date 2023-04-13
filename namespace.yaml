@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata: 
+  name: casestudyk8s
+  labels:
+    casestudyk8s: casestudyk8s
+...

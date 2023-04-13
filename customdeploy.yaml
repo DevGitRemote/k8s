@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: customdeploy
+  labels:
+    customdeploy: customlabels
+spec:
+  replicas: 2
+  selector: 
+    matchLabels:
+      customdeploy: customlabels
+  template:
+    metadata:
+      labels:
+        customdeploy: customlabels
+    spec:
+      containers:
+        - name: customcontain
+          image: devrajdock/casek8s
+          ports:
+            - containerPort: 80
+...
